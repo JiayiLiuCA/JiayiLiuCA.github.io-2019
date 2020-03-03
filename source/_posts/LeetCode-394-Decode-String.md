@@ -1,7 +1,7 @@
 ---
 title: LeetCode 394. Decode String
 date: 2020-02-26 22:47:15
-tags: LeetCode
+tags:
 ---
 
 **First Submission**
