@@ -4,7 +4,7 @@
 
 # Site
 title: J's
-subtitle: ''
+subtitle: 'Blog'
 description: ''
 keywords:
 author: Jiayi Liu
@@ -94,6 +94,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: nextV7
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
