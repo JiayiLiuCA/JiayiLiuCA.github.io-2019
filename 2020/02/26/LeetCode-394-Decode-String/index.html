@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"www.jiayiliu.ca","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="First Submission 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465class Solution &amp;#123;public:    string decodeString(string s)">
+  <meta name="description" content="First Submission class Solution { public:     string decodeString(string s) {         vector &lt;vector &lt;int&gt;&gt; encoded &#x3D; findNum(s);         if (encoded.size() &#x3D;&#x3D; 0) {             return s;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode 394. Decode String">
 <meta property="og:url" content="www.jiayiliu.ca/2020/02/26/LeetCode-394-Decode-String/index.html">
 <meta property="og:site_name" content="J&#39;s">
-<meta property="og:description" content="First Submission 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465class Solution &amp;#123;public:    string decodeString(string s)">
+<meta property="og:description" content="First Submission class Solution { public:     string decodeString(string s) {         vector &lt;vector &lt;int&gt;&gt; encoded &#x3D; findNum(s);         if (encoded.size() &#x3D;&#x3D; 0) {             return s;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-27T04:47:15.000Z">
 <meta property="article:modified_time" content="2020-03-03T01:48:41.277Z">
@@ -208,11 +208,104 @@
 
       
         <p><strong>First Submission</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">decodeString</span><span class="hljs-params">(<span class="hljs-built_in">string</span> s)</span> </span>&#123;<br>        <span class="hljs-built_in">vector</span> &lt;<span class="hljs-built_in">vector</span> &lt;<span class="hljs-keyword">int</span>&gt;&gt; encoded = findNum(s);<br>        <span class="hljs-keyword">if</span> (encoded.size() == <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">return</span> s;<br>        &#125;<br>        <span class="hljs-built_in">string</span> ret = <span class="hljs-string">""</span>;<br>        <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(i&lt;s.length()) &#123;<br>            <span class="hljs-keyword">if</span> (s[i] &gt;= <span class="hljs-string">'0'</span> &amp;&amp; s[i] &lt;= <span class="hljs-string">'9'</span>) &#123;<br>                <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; token = encoded[j];<br>                ret += dupString(decodeString(s.substr(token[<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>,token[<span class="hljs-number">2</span>]-token[<span class="hljs-number">1</span>]<span class="hljs-number">-1</span>)),token[<span class="hljs-number">0</span>]);<br>                j++;<br>                i = token[<span class="hljs-number">2</span>];<br>            &#125;<br>            <span class="hljs-keyword">else</span> &#123;<br>                ret += s[i];<br>            &#125;<br>            i++;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ret;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">dupString</span><span class="hljs-params">(<span class="hljs-built_in">string</span> s, <span class="hljs-keyword">int</span> n)</span> </span>&#123;<br>        <span class="hljs-built_in">string</span> str = <span class="hljs-string">""</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i&lt;n; i++) &#123;<br>            str += s;<br>        &#125;<br>        <span class="hljs-keyword">return</span> str;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span> &lt;<span class="hljs-keyword">int</span>&gt;&gt; <span class="hljs-title">findNum</span><span class="hljs-params">(<span class="hljs-built_in">string</span> s)</span> </span>&#123; <span class="hljs-comment">//find [] in string s</span><br>        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span> &lt;<span class="hljs-keyword">int</span>&gt; &gt;encoded = &#123;&#125;; <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i&lt;s.length(); i++) &#123;<br>            <span class="hljs-keyword">if</span> (s[i] &gt;= <span class="hljs-string">'0'</span> &amp;&amp; s[i] &lt;= <span class="hljs-string">'9'</span>) &#123;<br>                <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; token = &#123;<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>&#125;;<br>                <span class="hljs-keyword">bool</span> found = <span class="hljs-literal">false</span>;<br>                <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-built_in">stack</span> = &#123;&#125;;<br>                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = i; j&lt;s.length(); j++) &#123;<br>                    <span class="hljs-keyword">if</span> (!found &amp;&amp; s[j] &gt;= <span class="hljs-string">'0'</span> &amp;&amp; s[j] &lt;= <span class="hljs-string">'9'</span>) &#123;<br>                        token[<span class="hljs-number">0</span>] = token[<span class="hljs-number">0</span>]*<span class="hljs-number">10</span>+s[j]-<span class="hljs-string">'0'</span>;<br>                    &#125;<br>                    <span class="hljs-keyword">if</span> (s[j] == <span class="hljs-string">'['</span>) &#123;<br>                        found = <span class="hljs-literal">true</span>;<br>                        <span class="hljs-built_in">stack</span>.push_back(j);<br>                    &#125;<br>                    <span class="hljs-keyword">if</span> (s[j] == <span class="hljs-string">']'</span>) &#123;<br>                        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">stack</span>.size() == <span class="hljs-number">1</span>) &#123;<br>                            token[<span class="hljs-number">1</span>] = <span class="hljs-built_in">stack</span>[<span class="hljs-number">0</span>];<br>                            token[<span class="hljs-number">2</span>] = j;<br>                            encoded.push_back(token);<br>                            <span class="hljs-built_in">stack</span>.pop_back();<br>                            i = j;<br>                            <span class="hljs-keyword">break</span>; <span class="hljs-comment">//found</span><br>                        &#125;<br>                        <span class="hljs-built_in">stack</span>.pop_back();<br>                    &#125;<br>                    <br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> encoded;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<pre><code class="cpp">class Solution {
+public:
+    string decodeString(string s) {
+        vector &lt;vector &lt;int&gt;&gt; encoded = findNum(s);
+        if (encoded.size() == 0) {
+            return s;
+        }
+        string ret = &quot;&quot;;
+        int i = 0;
+        int j = 0;
+        while(i&lt;s.length()) {
+            if (s[i] &gt;= &#39;0&#39; &amp;&amp; s[i] &lt;= &#39;9&#39;) {
+                vector&lt;int&gt; token = encoded[j];
+                ret += dupString(decodeString(s.substr(token[1]+1,token[2]-token[1]-1)),token[0]);
+                j++;
+                i = token[2];
+            }
+            else {
+                ret += s[i];
+            }
+            i++;
+        }
+        return ret;
+    }
+    string dupString(string s, int n) {
+        string str = &quot;&quot;;
+        for (int i = 0; i&lt;n; i++) {
+            str += s;
+        }
+        return str;
+    }
 
+    vector&lt;vector &lt;int&gt;&gt; findNum(string s) { //find [] in string s
+        vector&lt;vector &lt;int&gt; &gt;encoded = {}; 
+        for(int i = 0; i&lt;s.length(); i++) {
+            if (s[i] &gt;= &#39;0&#39; &amp;&amp; s[i] &lt;= &#39;9&#39;) {
+                vector&lt;int&gt; token = {0,0,0};
+                bool found = false;
+                vector&lt;int&gt; stack = {};
+                for(int j = i; j&lt;s.length(); j++) {
+                    if (!found &amp;&amp; s[j] &gt;= &#39;0&#39; &amp;&amp; s[j] &lt;= &#39;9&#39;) {
+                        token[0] = token[0]*10+s[j]-&#39;0&#39;;
+                    }
+                    if (s[j] == &#39;[&#39;) {
+                        found = true;
+                        stack.push_back(j);
+                    }
+                    if (s[j] == &#39;]&#39;) {
+                        if (stack.size() == 1) {
+                            token[1] = stack[0];
+                            token[2] = j;
+                            encoded.push_back(token);
+                            stack.pop_back();
+                            i = j;
+                            break; //found
+                        }
+                        stack.pop_back();
+                    }
+
+                }
+            }
+        }
+        return encoded;
+    }
+};</code></pre>
 <p><strong>Simplified</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">decodeString</span><span class="hljs-params">(<span class="hljs-built_in">string</span> s)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">return</span> decodeString(s,i); <span class="hljs-comment">//start from index 0;</span><br>         <span class="hljs-comment">// a temporary cannot bind to a non-const reference. Have declare an int.</span><br>    &#125;<br>    <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">decodeString</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-built_in">string</span> &amp;s, <span class="hljs-keyword">int</span> &amp;i)</span> </span>&#123; <span class="hljs-comment">// i is starting index</span><br>        <span class="hljs-comment">// Forgot to use reference in parameters</span><br>        <br>        <span class="hljs-built_in">string</span> res = <span class="hljs-string">""</span>;<br>        <br>        <span class="hljs-keyword">while</span>(i&lt;s.length() &amp;&amp; s[i] != <span class="hljs-string">']'</span>) &#123;<br>            <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">isdigit</span>(s[i])) &#123;<br>                res += s[i++];<br>            &#125;<br>            <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-keyword">int</span> n = <span class="hljs-number">0</span>;<br>                <span class="hljs-keyword">while</span>(i&lt;s.length() &amp;&amp; <span class="hljs-built_in">isdigit</span>(s[i])) &#123;<br>                    n = n*<span class="hljs-number">10</span> + s[i++] - <span class="hljs-string">'0'</span>;<br>                &#125;<br>                i++; <span class="hljs-comment">// '['</span><br>                <span class="hljs-built_in">string</span> str = decodeString(s,i);<br>                i++; <span class="hljs-comment">// ']'</span><br>                <span class="hljs-keyword">while</span>(n-- &gt; <span class="hljs-number">0</span>) &#123;<br>                    res += str;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<pre><code class="cpp">class Solution {
+public:
+    string decodeString(string s) {
+        int i = 0;
+        return decodeString(s,i); //start from index 0;
+         // a temporary cannot bind to a non-const reference. Have declare an int.
+    }
+    string decodeString(const string &amp;s, int &amp;i) { // i is starting index
+        // Forgot to use reference in parameters
 
+        string res = &quot;&quot;;
+
+        while(i&lt;s.length() &amp;&amp; s[i] != &#39;]&#39;) {
+            if (!isdigit(s[i])) {
+                res += s[i++];
+            }
+            else {
+                int n = 0;
+                while(i&lt;s.length() &amp;&amp; isdigit(s[i])) {
+                    n = n*10 + s[i++] - &#39;0&#39;;
+                }
+                i++; // &#39;[&#39;
+                string str = decodeString(s,i);
+                i++; // &#39;]&#39;
+                while(n-- &gt; 0) {
+                    res += str;
+                }
+            }
+        }
+        return res;
+    }
+};</code></pre>
 
     </div>
 
