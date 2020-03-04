@@ -600,7 +600,7 @@ comments:
 # Disqus
 disqus:
   enable: true
-  shortname: J's
+  shortname: JiayiLiuCA
   count: true
   #post_meta_order: 0
 
