@@ -5,7 +5,7 @@ tags: [leetcode]
 ---
 
 
-#LeetCode #394
+### LeetCode #394
 
 Given an encoded string, return its decoded string.
 
@@ -23,7 +23,7 @@ s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 
 <!--more-->
 
-**First Submission**
+### First Submission
 
 ```cpp
 class Solution {
@@ -93,7 +93,7 @@ public:
 };
 ```
 
-**Simplified**
+### Simplified
 
 ```cpp
 class Solution {
