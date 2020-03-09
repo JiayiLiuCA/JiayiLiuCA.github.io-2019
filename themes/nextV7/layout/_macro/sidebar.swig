@@ -7,15 +7,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
-
       {%- set display_toc = page.toc.enable and display_toc %}
       {%- if display_toc %}
         {%- set toc = toc(page.content, { class: "nav", list_number: page.toc.number, max_depth: page.toc.max_depth }) %}
         {%- set display_toc = toc.length > 1 and display_toc %}
       {%- endif %}    
-
-
-
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
           {{ __('sidebar.toc') }}
@@ -33,7 +29,7 @@
         {%- endif %}
       </div>
       <!--/noindex-->
-
+      
 
       <div class="site-overview-wrap sidebar-panel">
         {{ partial('_partials/sidebar/site-overview.swig', {}, {cache: theme.cache.enable}) }}
@@ -52,6 +48,8 @@
       <br />
 
       <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=n&d=rlsZvyZVuaLBeclox-VCRAkhMgss_QR14rC3qo1RRLw&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script>
+
+      
 
     </div>
   </aside>

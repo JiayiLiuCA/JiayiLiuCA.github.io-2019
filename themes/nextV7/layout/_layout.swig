@@ -34,6 +34,7 @@
       </div>
     </main>
 
+
     <footer class="footer">
       <div class="footer-inner">
         {{ partial('_partials/footer.swig', {}, {cache: theme.cache.enable}) }}

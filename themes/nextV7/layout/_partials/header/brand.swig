@@ -23,6 +23,8 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+
+
     {%- if subtitle %}
       {%- if theme.seo %}
         <h1 class="site-subtitle" itemprop="description">{{ subtitle }}</h1>

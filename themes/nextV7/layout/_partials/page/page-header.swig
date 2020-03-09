@@ -5,6 +5,7 @@
   {{- post_edit(page.source) }}
 </{%- if theme.seo %}h2{% else %}h1{%- endif %}>
 
+
 <div class="post-meta">
   {%- if page.description %}
     <div class="post-description">{{ page.description }}</div>
