@@ -1,8 +1,8 @@
 ---
 title: First
 date: 2020-02-20 18:32:00
-tags:
-toc: true
+categories: [life]
+tags: [life]
 ---
 
 ### 记
